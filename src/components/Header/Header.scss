@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 100px;
+
+    .link {
+        gap: 57px;
+        display: flex;
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: 17px;
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+  }
