@@ -28,15 +28,15 @@ function Home() {
           <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
         </div>
       </Banner>
-      <div className="card-container">
+      <section className="card-container">
         {locations.map((location) => (
           <Card
             key={location.id}
             title={location.title}
-            picture={location.picture}
+            cover={location.cover}
           />
         ))}
-      </div>
+      </section>
     </div>
   )
 }

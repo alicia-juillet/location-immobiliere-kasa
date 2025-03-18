@@ -1,11 +1,11 @@
 import "./Cards.scss"
 
-const Card = ({ title, picture }) => {
+const Card = ({ cover, title }) => {
   return (
-    <div className="cards">
-      <img src={picture} alt="Location" />
-      <span>{title}</span>
-    </div>
+    <article className="card">
+      <img src={cover} alt={title} />
+      <h2>{title}</h2>
+    </article>
   )
 }
 
