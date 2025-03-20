@@ -1,0 +1,30 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-img {
+    width: 597px;
+    height: 263px;
+    margin-top: 139px;
+  }
+
+  h1 {
+    margin-top: 139px;
+    color: #ff6060;
+    font-weight: 500;
+    font-size: 36px;
+  }
+
+  nav {
+    margin: 139px 0;
+
+    .home-link {
+      color: black;
+      text-decoration: none;
+      border-bottom: 1px solid black;
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+}

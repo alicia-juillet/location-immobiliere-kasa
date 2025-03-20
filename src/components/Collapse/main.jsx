@@ -6,12 +6,12 @@ const Collapse = ({ title, children }) => {
 
   return (
     <div className="collapse">
-      <button className="collapse-button" onClick={() => setIsOpen(!isOpen)}>
+      <button className="collapse-button">
         {title}
         <i
+          onClick={() => setIsOpen(!isOpen)}
           className={`fas ${isOpen ? "fa-chevron-down" : "fa-chevron-up"}`}
         ></i>{" "}
-        {/* Icône Font Awesome */}
       </button>
       <div className={`collapse-content ${isOpen ? "open" : ""}`}>
         {children}

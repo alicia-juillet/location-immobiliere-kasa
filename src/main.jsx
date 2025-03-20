@@ -6,6 +6,7 @@ import Header from "./components/Header/main"
 import About from "./pages/About/main"
 import Footer from "./components/Footer/main"
 import "./styles/main.scss"
+import Error from "./pages/Error/main"
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -14,8 +15,8 @@ createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error />} />
         {/* <Route path="/carousel" element={<Carousel />} /> */}
-        {/* <Route path="*" element={<Error />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>
