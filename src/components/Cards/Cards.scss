@@ -1,11 +1,14 @@
 .card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  row-gap: 50px;
+  column-gap: 60px;
   padding: 56px 50px;
   background: #f6f6f6;
   border-radius: 25px;
   max-width: 1240px;
+  margin-top: 43px;
+  margin-bottom: 50px;
 
   .card {
     position: relative;

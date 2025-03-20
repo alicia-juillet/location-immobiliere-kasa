@@ -7,6 +7,7 @@ import About from "./pages/About/main"
 import Footer from "./components/Footer/main"
 import "./styles/main.scss"
 import Error from "./pages/Error/main"
+import Property from "./pages/Property/main"
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,7 +17,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
-        {/* <Route path="/carousel" element={<Carousel />} /> */}
+        <Route path="/property/:id" element={<Property />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -1,8 +1,11 @@
 import "./Cards.scss"
+import { useNavigate } from "react-router-dom"
 
-const Card = ({ cover, title }) => {
+const Card = ({ id, cover, title }) => {
+  const navigate = useNavigate()
+
   return (
-    <article className="card">
+    <article className="card" onClick={() => navigate(`/property/${id}`)}>
       <img src={cover} alt={title} />
       <h2>{title}</h2>
     </article>
