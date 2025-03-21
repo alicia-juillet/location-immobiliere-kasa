@@ -1,4 +1,7 @@
 import { useState } from "react"
+import "./Slideshow.scss"
+import sliderLeft from "../../assets/Logo/left.png"
+import sliderRight from "../../assets/Logo/right.png"
 
 const Slideshow = ({ pictures, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -17,12 +20,16 @@ const Slideshow = ({ pictures, title }) => {
 
   return (
     <article className="carousel">
-      <button onClick={prevSlide}>◀</button>
+      <button className="slider prev" onClick={prevSlide}>
+        <img src={sliderLeft} alt="left" />
+      </button>
       <img
         src={pictures[currentIndex]}
         alt={`${title} - slide ${currentIndex + 1}`}
       />
-      <button onClick={nextSlide}>▶</button>
+      <button className="slider next" onClick={nextSlide}>
+        <img src={sliderRight} alt="right" />
+      </button>
     </article>
   )
 }

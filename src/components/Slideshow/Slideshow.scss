@@ -1,0 +1,33 @@
+.carousel {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  img {
+    max-height: 415px;
+    border-radius: 25px;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .slider {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 79px;
+    z-index: 10;
+    transform: translateY(-50%);
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+}
