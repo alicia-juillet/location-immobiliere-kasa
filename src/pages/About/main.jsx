@@ -1,6 +1,7 @@
 import Banner from "../../components/Banner/main"
 import imgAbout from "../../assets/img/img-about.png"
 import Collapse from "../../components/Collapse/main"
+import "./About.scss"
 
 function About() {
   return (

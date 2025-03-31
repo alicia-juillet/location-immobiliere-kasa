@@ -1,14 +1,71 @@
 .carousel-container {
   padding: 20px;
 
-  h1 {
-    font-size: 36px;
-    color: #ff6060;
-    font-weight: 500;
+  .property-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .property-title {
+      font-size: 36px;
+      color: #ff6060;
+      font-weight: 500;
+    }
+
+    .property-host {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: right;
+    }
+
+    .property-name {
+      font-size: 18px;
+      color: #ff6060;
+      font-weight: 500;
+    }
+
+    .property-picture {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
   }
 
   .property-location {
-    font-weight: 500;
     font-size: 18px;
+    font-weight: 500;
+  }
+
+  .property-tag-rating {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .property-tags {
+      display: flex;
+      gap: 10px;
+
+      .property-tag {
+        color: white;
+        border-radius: 10px;
+        background-color: #ff6060;
+        padding: 4px 40px;
+      }
+    }
+
+    .property-rating {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  .collapse-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 24px;
+    gap: 76px;
   }
 }
