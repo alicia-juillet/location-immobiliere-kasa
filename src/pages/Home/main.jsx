@@ -25,7 +25,10 @@ function Home() {
         <div>
           <img src={imgHome} alt="plage" className="img-banner" />
           <div className="overlay"></div>
-          <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
+          <h1 className="banner-title">
+            <span className="banner-text">Chez vous,</span>
+            <span className="banner-text"> partout et ailleurs</span>
+          </h1>
         </div>
       </Banner>
       <section className="card-container">

@@ -1,18 +1,33 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 45px;
+@use "../../styles/mixins.scss" as mixins;
 
-    .link {
-        gap: 57px;
-        display: flex;
-        font-size: 24px;
-        font-weight: 500;
-        margin-top: 17px;
-        
-        a {
-            text-decoration: none;
-            color: black;
-        }
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+
+  .link {
+    gap: 57px;
+    display: flex;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 17px;
+
+    a {
+      text-decoration: none;
+      color: black;
     }
   }
+
+  @include mixins.mobile {
+    .link {
+      font-size: 12px;
+      font-weight: 500;
+      gap: 26px;
+      text-transform: uppercase;
+    }
+
+    .kasa-logo {
+      height: 47px;
+    }
+  }
+}

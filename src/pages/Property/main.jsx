@@ -52,34 +52,37 @@ function Property() {
     <section className="carousel-container">
       <Slideshow title={location.title} pictures={location.pictures} />
       <div className="property-header">
-        <h1 className="property-title">{location.title}</h1>
-
-        <div className="property-host">
-          <div className="property-name">
-            {location.host.name.split(" ").map((part, index) => (
-              <div key={index}>{part}</div>
+        <div className="property-infos">
+          <h1 className="property-title">{location.title}</h1>
+          <h2 className="property-location">{location.location}</h2>
+          <div className="property-tags">
+            {location.tags.map((tag, index) => (
+              <span key={index} className="property-tag">
+                {tag}
+              </span>
             ))}
           </div>
-          <img
-            src={location.host.picture}
-            alt={location.host.name}
-            className="property-picture"
-          />
+        </div>
+
+        <div className="property-host">
+          <div className="property-host-info">
+            <div className="property-name">
+              {location.host.name.split(" ").map((part, index) => (
+                <div key={index}>{part}</div>
+              ))}
+            </div>
+            <img
+              src={location.host.picture}
+              alt={location.host.name}
+              className="property-picture"
+            />
+          </div>
+          <div className="property-rating">
+            {renderStars(parseInt(location.rating))}
+          </div>
         </div>
       </div>
-      <h2 className="property-location">{location.location}</h2>
-      <div className="property-tag-rating">
-        <div className="property-tags">
-          {location.tags.map((tag, index) => (
-            <span key={index} className="property-tag">
-              {tag}
-            </span>
-          ))}
-        </div>
-        <div className="property-rating">
-          {renderStars(parseInt(location.rating))}
-        </div>
-      </div>
+
       <div className="collapse-container">
         <Collapse title="Description">
           <p>{location.description}</p>

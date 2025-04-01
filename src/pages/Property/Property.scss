@@ -1,63 +1,72 @@
+@use "../../styles/mixins.scss" as mixins;
+
 .carousel-container {
   padding: 20px;
 
   .property-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
-    .property-title {
-      font-size: 36px;
-      color: #ff6060;
-      font-weight: 500;
+    .property-infos {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .property-title {
+        font-size: 36px;
+        color: #ff6060;
+        font-weight: 500;
+      }
+      .property-location {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .property-tags {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+
+        .property-tag {
+          color: white;
+          border-radius: 10px;
+          background-color: #ff6060;
+          padding: 4px 40px;
+          font-weight: 700;
+          font-size: 14px;
+        }
+      }
     }
 
     .property-host {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-end;
       gap: 10px;
       text-align: right;
-    }
 
-    .property-name {
-      font-size: 18px;
-      color: #ff6060;
-      font-weight: 500;
-    }
+      .property-host-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
-    .property-picture {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-  }
+        .property-name {
+          font-size: 18px;
+          color: #ff6060;
+          font-weight: 500;
+        }
 
-  .property-location {
-    font-size: 18px;
-    font-weight: 500;
-  }
-
-  .property-tag-rating {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-
-    .property-tags {
-      display: flex;
-      gap: 10px;
-
-      .property-tag {
-        color: white;
-        border-radius: 10px;
-        background-color: #ff6060;
-        padding: 4px 40px;
+        .property-picture {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
       }
-    }
 
-    .property-rating {
-      display: flex;
-      gap: 10px;
+      .property-rating {
+        display: flex;
+        gap: 10px;
+      }
     }
   }
 
@@ -67,5 +76,21 @@
     flex-direction: row;
     margin-top: 24px;
     gap: 76px;
+  }
+
+  @include mixins.mobile {
+    padding: 0;
+    margin-top: 27px;
+
+    .carousel {
+      margin: 0;
+      img {
+        height: 255px;
+      }
+
+      .slider img {
+        height: 19px;
+      }
+    }
   }
 }

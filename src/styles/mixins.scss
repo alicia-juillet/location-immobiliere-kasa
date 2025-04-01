@@ -1,0 +1,7 @@
+@use "./variables.scss" as variables;
+
+@mixin mobile {
+  @media screen and (max-width: variables.$breakpoint-mobile) {
+    @content;
+  }
+}

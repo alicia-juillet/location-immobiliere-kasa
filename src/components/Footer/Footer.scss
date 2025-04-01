@@ -1,15 +1,39 @@
-.footer {
-    background-color: black;
-    text-align: center;
-    color: white;
-    margin: 0 -100px;
-    
-    .kasa-logo {
-        padding-top: 66px;
-    }
+@use "../../styles/mixins.scss" as mixins;
 
+.footer {
+  background-color: black;
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  margin-top: auto;
+
+  .kasa-logo {
+    padding-top: 66px;
+  }
+
+  p {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  @include mixins.mobile {
     p {
-        padding-top: 30px;
-        padding-bottom: 30px;
+      font-size: 12px;
+      flex-direction: column;
+      gap: 0;
+      padding-top: 10px;
+      padding-bottom: 58px;
+
+      span {
+        line-height: 1.2;
+      }
     }
+  }
 }

@@ -1,3 +1,5 @@
+@use "../../styles/mixins.scss" as mixins;
+
 .collapse {
   width: 1023px;
   margin-bottom: 28px;
@@ -38,6 +40,19 @@
       max-height: 500px;
       padding: 20px;
       transition: max-height 0.2s cubic-bezier(1, 0, 1, 0);
+    }
+  }
+
+  @include mixins.mobile {
+    width: 335px;
+
+    &-button {
+      height: 30px;
+      font-size: 13px;
+    }
+
+    &-content {
+      font-size: 13px;
     }
   }
 }
