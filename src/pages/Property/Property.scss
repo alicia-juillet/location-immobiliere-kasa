@@ -92,5 +92,73 @@
         height: 19px;
       }
     }
+
+    .property-header {
+      flex-direction: column;
+      .property-infos {
+        gap: 5px;
+
+        .property-title {
+          font-size: 18px;
+          font-weight: 500;
+          margin-top: 15px;
+        }
+        .property-location {
+          font-size: 14px;
+        }
+
+        .property-tags {
+          margin-top: 5px;
+          flex-wrap: wrap;
+          .property-tag {
+            font-size: 10px;
+            padding: 4px 25px;
+            white-space: nonwrap;
+          }
+        }
+      }
+
+      .property-host {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 24px;
+
+        .property-host-info {
+          display: flex;
+          align-items: flex-end;
+
+          .property-name {
+            font-size: 12px;
+          }
+
+          .property-picture {
+            width: 32px;
+            height: 32px;
+          }
+        }
+
+        .property-rating {
+          display: flex;
+          align-items: flex-start;
+
+          img {
+            height: 13px;
+          }
+        }
+      }
+    }
+
+    .collapse-container {
+      flex-direction: column;
+      margin-top: 20px;
+      margin-bottom: 27px;
+      gap: 20px;
+
+      .collapse {
+        margin: 0;
+      }
+    }
   }
 }
