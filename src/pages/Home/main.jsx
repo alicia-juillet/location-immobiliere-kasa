@@ -10,7 +10,6 @@ function Home() {
       try {
         const response = await fetch("/data/logements.json")
         const data = await response.json()
-        console.log("données récupérées:", data)
         setLocations(data)
       } catch (error) {
         console.error("Une erreur est survenue", error)
