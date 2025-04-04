@@ -1,6 +1,6 @@
 $primary-color: #ffffff;
 @use "./reset.scss";
-@use "./mixins.scss";
+@use "./mixins.scss" as mixins;
 
 body {
   background-color: $primary-color;
@@ -8,12 +8,24 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  margin-left: 20px;
-  margin-right: 20px;
-  overflow-x: hidden;
+  min-height: 100vh;
 
   #root {
-    max-width: 1240px;
     width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .main-container {
+      flex-grow: 1;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+    @include mixins.mobile {
+      .main-container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
   }
 }

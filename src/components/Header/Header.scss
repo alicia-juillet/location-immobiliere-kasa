@@ -4,6 +4,8 @@
   display: flex;
   justify-content: space-between;
   margin-top: 45px;
+  margin-left: 100px;
+  margin-right: 100px;
 
   .link {
     gap: 57px;
@@ -19,6 +21,11 @@
   }
 
   @include mixins.mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: 0;
+
     .link {
       font-size: 12px;
       font-weight: 500;
